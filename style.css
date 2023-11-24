@@ -154,10 +154,16 @@ button a {
 
 .header-text__img-wrapper {
   position: absolute;
-  width: clamp(3rem, 30vw, 12.5rem);
+  width: clamp(2.75rem, 30vw, 12.5rem);
   left: -4rem;
-  top: 20%;
+  top: 2%;
   z-index: 0;
+}
+
+@media (min-width: 50em) {
+  .header-text__img-wrapper {
+    top: 20%;
+  }
 }
 
 @media (min-width: 50em) {
@@ -617,7 +623,7 @@ button a {
 
 .section-faq {
   position: relative;
-  padding-block: 10rem;
+  padding-block: 5rem;
   background-color: var(--neutral-clr-700);
   color: var(--neutral-clr-100);
   overflow: hidden;
@@ -637,53 +643,17 @@ button a {
   line-height: 1.2;
 }
 
-@media (min-width: 50em) {
-  .section-faq .container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-}
-
 .faq-image-side img {
   margin-inline: auto;
   width: min(100%, 32.063rem);
 }
 
 .faq-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 2rem;
-  max-width: 25ch;
-  margin-inline: auto;
+  margin-top: 4rem;
 }
 
-.faq-side p {
-  text-align: center;
-  font-size: var(--fs-400);
-  font-weight: var(--fw-bold);
-  margin-block: 1rem;
-}
-
-.faq-side p + p {
-  margin-block: 2rem;
-}
-
-@media (min-width: 50em) {
-  .faq-side {
-    margin-top: 0;
-  }
-}
-
-.faq__button {
-  width: 100%;
-}
-
-.faq__button a {
-  border-radius: 1rem;
-  background: linear-gradient(90deg, #F8E540 0%, #D39013 100%);
-  font-weight: var(--fw-bold);
+.faq-side button a {
+  box-shadow: 0px 0px 43px 0px #00FF93;
 }
 
 .section-faq .circle {
@@ -697,16 +667,16 @@ button a {
   animation: circle-anim 3.5s linear infinite;
   left: -6rem;
   transform: translateY(50%);
-  bottom: 50%;
+  bottom: 53%;
 }
 
 @media (min-width: 50em) {
   .section-faq .circle {
     transform: translateY(0);
-    bottom: 1.5rem;
+    bottom: 45%;
     left: -15%;
-    width: clamp(25rem, 50vw, 37.5rem);
-    height: clamp(25rem, 50vw, 37.5rem);
+    width: clamp(25rem, 50vw, 40rem);
+    height: clamp(25rem, 50vw, 40rem);
     border-width: 3rem;
   }
 }
