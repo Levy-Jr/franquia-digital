@@ -211,8 +211,75 @@ button a {
   margin-block: 1rem;
 }
 
+.watch-video {
+  margin-block: 1rem;
+}
+
+.watch-video-text {
+  font-weight: var(--fw-bold);
+  font-size: 1.25rem;
+}
+
+#arrowAnim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 2s linear infinite; 
+  animation: slide 2s linear infinite;
+}
+
+.delay1 { 
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.delay2 { 
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5vw);
+  }	
+  20% {
+    opacity: 1;
+    transform: translateY(0vw);
+  }	
+  80% {
+    opacity: 1;
+    transform: translateY(3vw);
+  }	
+  100% {
+    opacity: 0;
+    transform: translateY(4.5vw);
+  }	
+}
+
+@media(min-width: 50em){
+  .watch-video {
+    display: none;
+  }
+}
+
 .header button.desktop {
   display: none;
+}
+
+.header button.mobile{
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .header button {
