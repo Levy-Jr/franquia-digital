@@ -211,14 +211,28 @@ button a {
   margin-block: 1rem;
 }
 
+.header button.desktop {
+  display: none;
+}
+
 .header button {
   margin-top: 1rem;
-  box-shadow: 0 0 3.5rem 0 #00FF93;
   margin-bottom: 4rem;
   border-radius: .75rem;
 }
 
+@media (min-width: 50em){
+  .header button.desktop {
+    display: inline-block;
+  }
+
+  .header button.mobile {
+    display: none;
+  }
+}
+
 .header button a {
+  box-shadow: 0 0 3.5rem 0 #00FF93;
   text-decoration: none;
   background-color: var(--primary-clr-300);
   color: var(--neutral-clr-900);
@@ -229,6 +243,9 @@ button a {
 }
 
 .header-image-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   padding-block: 0 7.5rem;
 }
